@@ -13,5 +13,5 @@ twitterApp.get("/", (req, res) => {
 })
 
 twitterApp.get("/news", (req, res) => {
-    res.send("No news for you. You're lonely");
+    res.send("No news for you. You're lonely, sucker!");
 })
