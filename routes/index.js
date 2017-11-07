@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.use('/:anything', (req, res, next) => {
     console.log(req.method + " /" + req.params.anything)
-    console.log(res.status)
+        //console.log(res.status)
     next();
 })
 
