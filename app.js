@@ -19,13 +19,6 @@ const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
 
 twitterApp.use('/', router);
 
-twitterApp.get("/", (req, res) => {
-    res.render ('index', {title: 'Hall of Fame', people: people});
-})
-
-twitterApp.get("/news", (req, res) => {
-    res.send("No news for you. You're lonely, sucker!");
-})
 
 
 var locals = {
@@ -36,3 +29,4 @@ var locals = {
         { name: 'Hermione'}
     ]
 };
+

@@ -9,4 +9,8 @@ router.get('/', function (req, res) {
   res.render( 'index', { tweets: tweets } );
 });
 
+router.use(express.static('public'));
+
 module.exports = router;
+
+//'/Users/dianalease/Desktop/Fullstack/Junior-Phase/twitter-js/public/stylesheets/style.css'
