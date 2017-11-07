@@ -1,15 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-router.use('/:anything', (req, res, next) => {
-    console.log(req.method + " /" + req.params.anything)
-        //console.log(res.status)
-    next();
-})
+const tweetBank = require('../tweetBank');
 
-router.use('/special/', (req, res, next) => {
-    console.log("You're SUPER special today!");
-    next();
-})
+
+router.get('/', function (req, res) {
+  let tweets = tweetBank.list();
+  res.render( 'index', { tweets: tweets } );
+});
 
 module.exports = router;
