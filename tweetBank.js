@@ -5,7 +5,7 @@ let data = [];
 
 //FUNCTIONS
 function add(name, content) {
-    data.push({ name: name, content: content });
+    data.push({ username: name.split(" ").join(""), name: name, content: content });
 }
 
 function list() {
